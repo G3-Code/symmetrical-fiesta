@@ -10,10 +10,7 @@ export default function App() {
   };
 
   const addButtonHandler = () => {
-    console.log(enteredGoal);
-    setCourseGoals(enteredGoal => [...courseGoals, enteredGoal]);
-    console.log(enteredGoal);
-    console.log("============================" + courseGoals);
+    setCourseGoals(currentGoals => [...currentGoals, enteredGoal]);
   };
 
   return (
@@ -28,7 +25,11 @@ export default function App() {
         <Button title="ADD" onPress={addButtonHandler} />
       </View>
       <View>
-        <Text>Course Goals</Text>
+        {courseGoals.map((goal, index) => (
+          <View key={index} style={styles.listItem}>
+            <Text>{goal}</Text>
+          </View>
+        ))}
       </View>
     </View>
   );
@@ -48,5 +49,9 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     width: 200,
     padding: 10
+  },
+  listItem: {
+    marginVertical: 10,
+    backgroundColor: "#fef"
   }
 });
