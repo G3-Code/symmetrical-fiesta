@@ -3,15 +3,15 @@ import { StyleSheet, Text, View, Button, TextInput } from "react-native";
 
 export default function App() {
   return (
-    <View style={{ paddingTop: 50, height: 200 }}>
-      <View style={styles.container}>
+    <View style={{ padding: 50 }}>
+      <View>
         <TextInput
           placeholder="Enter your goal"
           style={{
             borderColor: "#bbb",
             borderWidth: 1,
-            width: 350,
-            height: 40
+            width: 200,
+            padding: 10
           }}
         />
         <Button title="ADD" />
