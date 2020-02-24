@@ -22,7 +22,10 @@ const GoalInput = props => {
         onChangeText={inputTextHandler}
         value={enteredGoal}
       />
-      <Button title="ADD" onPress={() => props.buttonHandler(enteredGoal)} />
+      <Button
+        title="ADD"
+        onPress={props.buttonHandler.bind(this, enteredGoal)}
+      />
     </View>
   );
 };
