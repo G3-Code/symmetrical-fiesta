@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
 const GoalItem = props => {
   return (
@@ -8,5 +8,12 @@ const GoalItem = props => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  listItem: {
+    marginVertical: 10,
+    backgroundColor: "#fef"
+  }
+});
 
 export default GoalItem;
