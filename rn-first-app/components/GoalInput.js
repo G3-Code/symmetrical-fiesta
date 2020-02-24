@@ -1,18 +1,11 @@
-import React from "react";
-import { View, StyleSheet } from "react-native";
+import React, { useState } from "react";
+import { View, TextInput, StyleSheet } from "react-native";
 
 const GoalInput = () => {
   const [enteredGoal, setEnteredGoal] = useState();
 
   const inputTextHandler = enteredText => {
     setEnteredGoal(enteredText);
-  };
-
-  const addButtonHandler = () => {
-    setCourseGoals(currentGoals => [
-      ...currentGoals,
-      { id: Math.random().toString(), value: enteredGoal }
-    ]);
   };
 
   return (
